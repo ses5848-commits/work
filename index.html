@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim Hong-jin's SciGraph Dashboard - 과학 교육 자원 저장소</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="top-bar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand">Kim Hong-jin's</span>
+                    <span class="project">SciGraph <span>Dashboard</span></span>
+                </div>
+            </div>
+            <div class="top-bar-actions">
+                <a href="https://ncic.re.kr/inv/org/list.do" target="_blank" class="ext-resource-link">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>교육과정 원문 다운로드</span>
+                </a>
+                <a href="https://www.edunet.net/" target="_blank" class="ext-resource-link">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>에듀넷·티-클리어</span>
+                </a>
+                <a href="https://m.m-teacher.co.kr/pages/mid/Main.mrn" target="_blank" class="ext-resource-link">
+                    <i class="fa-solid fa-book"></i>
+                    <span>엠티처 교과서 자료실</span>
+                </a>
+                <div class="search-container">
+                    <i class="fa-solid fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="성취기준 또는 키워드 검색...">
+                </div>
+            </div>
+
+        </header>
+
+        <nav class="main-nav">
+            <div class="nav-wrapper">
+                <button class="nav-item active" data-view="home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>홈</span>
+                </button>
+                <button class="nav-item" data-view="contents">
+                    <i class="fa-solid fa-sitemap"></i>
+                    <span>내용 체계</span>
+                </button>
+                <button class="nav-item" data-view="standards">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>성취기준</span>
+                </button>
+                <button class="nav-item" data-view="teaching">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>교수⋅학습</span>
+                </button>
+                <button class="nav-item" data-view="evaluation">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <span>평가</span>
+                </button>
+                <div class="nav-item" data-view="gane">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>만능 가네</span>
+                </div>
+                <button class="nav-item" data-view="strategy">
+                    <i class="fa-solid fa-face-smile-wink"></i>
+                    <span>리비키 독서전략</span>
+                </button>
+                <button class="nav-item" data-view="books">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span>추천도서</span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="dashboard-container" id="grid-container">
+            <!-- Dynamic Content Categories (Units) will be injected here -->
+            <div class="loading-state" style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                <i class="fa-solid fa-circle-notch fa-spin fa-2x"></i>
+                <p>대시보드를 구성하는 중...</p>
+            </div>
+        </main>
+
+        <footer
+            style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); background: white;">
+            &copy; 2026 SciGraph Pro. 중학교 과학 교사를 위한 지능형 자원 지도.
+        </footer>
+    </div>
+
+    <!-- Modal for Detailed Content -->
+    <div id="detail-modal" class="modal-overlay">
+        <div class="modal-content">
+            <header class="modal-header">
+                <div class="modal-title-group">
+                    <i id="modal-icon" class="fa-solid"></i>
+                    <h3 id="modal-title">상세 정보</h3>
+                </div>
+                <button class="close-modal" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+            <div id="modal-body" class="modal-body">
+                <!-- Dynamic content injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Data & Interactive Logic -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

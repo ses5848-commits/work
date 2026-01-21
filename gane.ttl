@@ -1,0 +1,105 @@
+@prefix ex: <http://example.org/gagne-instruction#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### 1. Ontological Framework (OWL Schema) ###
+
+# 클래스 정의: 수업 사태
+ex:InstructionalEvent a owl:Class ;
+    rdfs:label "수업 사태" ;
+    rdfs:comment "가네가 제시한 효과적인 수업을 위한 9가지 단계" .
+
+# 클래스 정의: 학습의 내부 과정
+ex:LearningProcess a owl:Class ;
+    rdfs:label "내부적 학습 과정" ;
+    rdfs:comment "교수 사태에 의해 촉발되는 학습자의 심리적 기제" .
+
+# 속성 정의: 수업 사태가 내부 과정을 촉진함
+ex:triggersProcess a owl:ObjectProperty ;
+    rdfs:domain ex:InstructionalEvent ;
+    rdfs:range ex:LearningProcess ;
+    rdfs:label "학습 과정 촉발" .
+
+# 속성 정의: 사태의 순서
+ex:followedBy a owl:TransitiveProperty ;
+    rdfs:domain ex:InstructionalEvent ;
+    rdfs:range ex:InstructionalEvent ;
+    rdfs:label "다음 단계" .
+
+### 2. 내부 학습 과정 (Internal Processes) 정의 ###
+
+ex:Alertness a ex:LearningProcess ; rdfs:label "주의 집중/각성" .
+ex:Expectancy a ex:LearningProcess ; rdfs:label "기대감 형성" .
+ex:RetrievalToWorkingMemory a ex:LearningProcess ; rdfs:label "단기기억으로의 인출" .
+ex:SelectivePerception a ex:LearningProcess ; rdfs:label "선택적 지각" .
+ex:SemanticEncoding a ex:LearningProcess ; rdfs:label "의미적 부호화" .
+ex:Responding a ex:LearningProcess ; rdfs:label "반응 및 수행" .
+ex:Reinforcement a ex:LearningProcess ; rdfs:label "강화" .
+ex:CueingRetrieval a ex:LearningProcess ; rdfs:label "인출 단서 제공" .
+ex:Generalization a ex:LearningProcess ; rdfs:label "일반화 및 전이" .
+
+### 3. 9가지 수업 사태 상세 인코딩 ###
+
+# 1. 주의 획득
+ex:Event01_GainAttention a ex:InstructionalEvent ;
+    rdfs:label "1. 주의 획득" ;
+    ex:description "흥미로운 질문이나 시각적 자극을 통해 학습자의 주의를 집중시킴" ;
+    ex:triggersProcess ex:Alertness ;
+    ex:followedBy ex:Event02_InformObjectives .
+
+# 2. 학습 목표 제시
+ex:Event02_InformObjectives a ex:InstructionalEvent ;
+    rdfs:label "2. 학습 목표 제시" ;
+    ex:description "학습 결과에 대한 기대를 형성하여 학습 동기를 유발함" ;
+    ex:triggersProcess ex:Expectancy ;
+    ex:followedBy ex:Event03_StimulateRecall .
+
+# 3. 선수 학습 회상 촉진
+ex:Event03_StimulateRecall a ex:InstructionalEvent ;
+    rdfs:label "3. 선수 학습 회상 촉진" ;
+    ex:description "새로운 정보를 배우기 위해 관련된 이전 지식을 장기기억에서 인출함" ;
+    ex:triggersProcess ex:RetrievalToWorkingMemory ;
+    ex:followedBy ex:Event04_PresentStimulus .
+
+# 4. 자극 제시
+ex:Event04_PresentStimulus a ex:InstructionalEvent ;
+    rdfs:label "4. 자극 제시" ;
+    ex:description "학습할 핵심 내용을 시각적/청각적으로 명확하게 제시함" ;
+    ex:triggersProcess ex:SelectivePerception ;
+    ex:followedBy ex:Event05_ProvideGuidance .
+
+# 5. 학습 안내 제공
+ex:Event05_ProvideGuidance a ex:InstructionalEvent ;
+    rdfs:label "5. 학습 안내 제공" ;
+    ex:description "유의미한 부호화를 돕기 위해 예시, 도표, 전략 등을 제공함" ;
+    ex:triggersProcess ex:SemanticEncoding ;
+    ex:followedBy ex:Event06_ElicitPerformance .
+
+# 6. 수행 유도
+ex:Event06_ElicitPerformance a ex:InstructionalEvent ;
+    rdfs:label "6. 수행 유도" ;
+    ex:description "학습자가 습득한 지식이나 기술을 실제로 연습해 보도록 함" ;
+    ex:triggersProcess ex:Responding ;
+    ex:followedBy ex:Event07_ProvideFeedback .
+
+# 7. 피드백 제공
+ex:Event07_ProvideFeedback a ex:InstructionalEvent ;
+    rdfs:label "7. 피드백 제공" ;
+    ex:description "수행의 정확성에 대한 정보를 제공하여 학습 내용을 강화함" ;
+    ex:triggersProcess ex:Reinforcement ;
+    ex:followedBy ex:Event08_AssessPerformance .
+
+# 8. 수행 평가
+ex:Event08_AssessPerformance a ex:InstructionalEvent ;
+    rdfs:label "8. 수행 평가" ;
+    ex:description "학습 목표의 달성 여부를 최종적으로 확인하고 인출을 고정함" ;
+    ex:triggersProcess ex:CueingRetrieval ;
+    ex:followedBy ex:Event09_EnhanceRetention .
+
+# 9. 파지 및 전이 증진
+ex:Event09_EnhanceRetention a ex:InstructionalEvent ;
+    rdfs:label "9. 파지 및 전이 증진" ;
+    ex:description "다양한 상황에 적용하는 연습을 통해 장기기억에 저장하고 전이력을 높임" ;
+    ex:triggersProcess ex:Generalization .

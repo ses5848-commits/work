@@ -1,0 +1,39 @@
+@prefix ex: <http://example.org/science-books/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# --- 카테고리 정의 (Middle School Science Achievement Standards) ---
+ex:Astronomy a ex:Category ; rdfs:label "태양계와 우주 (별, 은하, 천문학)" .
+ex:EarthScience a ex:Category ; rdfs:label "지구 시스템 (지권, 지층, 화산, 지진)" .
+ex:ClimateAndEnv a ex:Category ; rdfs:label "기후 변화와 환경 (생태계, 날씨)" .
+ex:GeneralScience a ex:Category ; rdfs:label "통합 과학 (과학 탐구, 융합)" .
+
+# --- 도서 데이터 26권 ---
+
+ex:Book01 a ex:Book ; schema:name "100가지 물건으로 보는 우주의 역사" ; schema:author "스텐 오덴발드" ; schema:publisher "스테이블" ; schema:datePublished "2025-01-08"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000214984520" ; ex:category ex:Astronomy . 
+ex:Book02 a ex:Book ; schema:name "과학 선생님이 읽어 주는 기후변화 보고서" ; schema:author "김추령" ; schema:publisher "서해문집" ; schema:datePublished "2025-02-15"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000215763667" ; ex:category ex:ClimateAndEnv . 
+ex:Book03 a ex:Book ; schema:name "바다에 미래가 있다" ; schema:author "이고은" ; schema:publisher "창비" ; schema:datePublished "2025-10-24"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000218243453" ; ex:category ex:EarthScience . 
+ex:Book04 a ex:Book ; schema:name "이지유의 이지 사이언스 1: 지구" ; schema:author "이지유" ; schema:publisher "창비" ; schema:datePublished "2020-03-06"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000000611993" ; ex:category ex:EarthScience . 
+ex:Book05 a ex:Book ; schema:name "이지유의 이지 사이언스 2: 우주" ; schema:author "이지유" ; schema:publisher "창비" ; schema:datePublished "2020-03-06"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000000611994" ; ex:category ex:Astronomy . 
+ex:Book06 a ex:Book ; schema:name "과학공화국 지구법정 4: 지표의 변화" ; schema:author "정완상" ; schema:publisher "자음과모음" ; schema:datePublished "2011-02-24"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000000774715" ; ex:category ex:EarthScience . 
+ex:Book07 a ex:Book ; schema:name "우리가 잘 몰랐던 천문학 이야기" ; schema:author "임진용" ; schema:publisher "연암서가" ; schema:datePublished "2015-07-10"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001540781" ; ex:category ex:Astronomy . 
+ex:Book08 a ex:Book ; schema:name "지구과학 이야기" ; schema:author "사마키 다케오" ; schema:publisher "더숲" ; schema:datePublished "2013-12-09"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001548924" ; ex:category ex:EarthScience . 
+ex:Book09 a ex:Book ; schema:name "기후 변화 쫌 아는 10대" ; schema:author "이지유" ; schema:publisher "풀빛" ; schema:datePublished "2020-06-25"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001804488" ; ex:category ex:ClimateAndEnv . 
+ex:Book10 a ex:Book ; schema:name "재밌어서 밤새 읽는 천문학 이야기" ; schema:author "아가타 히데히코" ; schema:publisher "더숲" ; schema:datePublished "2018-12-10"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001894169" ; ex:category ex:Astronomy . 
+ex:Book11 a ex:Book ; schema:name "우주의 역사, 최대한 쉽게 설명해 드립니다" ; schema:author "박재용" ; schema:publisher "이화북스" ; schema:datePublished "2021-07-19"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001942186" ; ex:category ex:Astronomy . 
+ex:Book12 a ex:Book ; schema:name "날씨전쟁" ; schema:author "캔디 구얼레이 외" ; schema:publisher "사파리" ; schema:datePublished "2025-10-10"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000218778748" ; ex:category ex:ClimateAndEnv . 
+ex:Book13 a ex:Book ; schema:name "지구, 2084(개정판)" ; schema:author "요슈타인 가아더" ; schema:publisher "라임" ; schema:datePublished "2025-02-27"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000215976575" ; ex:category ex:ClimateAndEnv . 
+ex:Book14 a ex:Book ; schema:name "우주 비즈니스 레볼루션" ; schema:author "송경민" ; schema:publisher "플루토" ; schema:datePublished "2025-06-24"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000216757440" ; ex:category ex:Astronomy . 
+ex:Book15 a ex:Book ; schema:name "환경과 생태 쫌 아는 10대" ; schema:author "최원형" ; schema:publisher "풀빛" ; schema:datePublished "2019-05-20"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001804467" ; ex:category ex:ClimateAndEnv . 
+ex:Book16 a ex:Book ; schema:name "빅뱅 쫌 아는 10대" ; schema:author "이지유" ; schema:publisher "풀빛" ; schema:datePublished "2019-07-10"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001804469" ; ex:category ex:Astronomy . 
+ex:Book17 a ex:Book ; schema:name "지진과 화산 쫌 아는 10대" ; schema:author "이지유" ; schema:publisher "풀빛" ; schema:datePublished "2021-06-10"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001804504" ; ex:category ex:EarthScience . 
+ex:Book18 a ex:Book ; schema:name "정답을 넘어서는 토론학교: 과학(2019)" ; schema:author "가치를꿈꾸는과학교사모임" ; schema:publisher "우리학교" ; schema:datePublished "2019-06-24"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001896607" ; ex:category ex:GeneralScience . 
+ex:Book19 a ex:Book ; schema:name "하리하라의 과학 24시" ; schema:author "이은희" ; schema:publisher "비룡소" ; schema:datePublished "2023-10-25"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000210833021" ; ex:category ex:GeneralScience . 
+ex:Book20 a ex:Book ; schema:name "코스모스(Cosmos)" ; schema:author "에마뉘엘 보두엥" ; schema:publisher "생각의길" ; schema:datePublished "2016-07-04"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001015921" ; ex:category ex:Astronomy . 
+ex:Book21 a ex:Book ; schema:name "관측과 기록으로 이어온 우리 천문학" ; schema:author "전준혁" ; schema:publisher "플루토" ; schema:datePublished "2026-01-23"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000218963755" ; ex:category ex:Astronomy . 
+ex:Book22 a ex:Book ; schema:name "지구가 권리를 가지는 날에는" ; schema:author "가치를꿈꾸는과학교사모임" ; schema:publisher "우리학교" ; schema:datePublished "2025-09-08"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000217455268" ; ex:category ex:ClimateAndEnv . 
+ex:Book23 a ex:Book ; schema:name "나는 달로 출근한다" ; schema:author "정민섭" ; schema:publisher "플루토" ; schema:datePublished "2025-08-25"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000217297987" ; ex:category ex:Astronomy . 
+ex:Book24 a ex:Book ; schema:name "모두를 위한 우주는 없다" ; schema:author "최은정" ; schema:publisher "갈매나무" ; schema:datePublished "2025-11-28"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000218629898" ; ex:category ex:Astronomy . 
+ex:Book25 a ex:Book ; schema:name "과학을 달리는 십대: 환경과 생태" ; schema:author "소이언" ; schema:publisher "우리학교" ; schema:datePublished "2021-10-12"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001851216" ; ex:category ex:ClimateAndEnv . 
+ex:Book26 a ex:Book ; schema:name "달력으로 배우는 지구환경 수업" ; schema:author "최원형" ; schema:publisher "블랙피쉬" ; schema:datePublished "2021-09-13"^^xsd:date ; schema:url "https://product.kyobobook.co.kr/detail/S000001056781" ; ex:category ex:ClimateAndEnv .

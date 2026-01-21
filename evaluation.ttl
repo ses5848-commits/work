@@ -1,0 +1,87 @@
+@prefix ex: <http://example.org/science-curriculum#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### 1. Class Definitions (클래스 정의) ###
+ex:Curriculum a rdfs:Class ; rdfs:label "과학과 교육과정" .
+ex:TeachingLearning a rdfs:Class ; rdfs:label "교수⋅학습" .
+ex:Evaluation a rdfs:Class ; rdfs:label "평가" .
+ex:Direction a rdfs:Class ; rdfs:label "방향" .
+ex:Method a rdfs:Class ; rdfs:label "방법" .
+ex:SubItem a rdfs:Class ; rdfs:label "세부 항목" .
+
+### 2. Property Definitions (속성 정의) ###
+ex:hasSection a rdf:Property ; rdfs:label "섹션 보유" .
+ex:hasDirection a rdf:Property ; rdfs:label "방향 설정" .
+ex:hasMethod a rdf:Property ; rdfs:label "방법 설정" .
+ex:includes a rdf:Property ; rdfs:label "상세 내용 포함" .
+ex:description n a rdf:Property ; rdfs:label "원문 내용" .
+
+### 3. [가] 교수⋅학습 데이터 ###
+
+ex:Section_TL a ex:TeachingLearning ;
+    rdfs:label "가. 교수⋅학습" ;
+    ex:hasDirection ex:TL_Direction ;
+    ex:hasMethod ex:TL_Method .
+
+# (1) 교수⋅학습의 방향
+ex:TL_Direction a ex:Direction ;
+    rdfs:label "(1) 교수⋅학습의 방향" ;
+    ex:includes ex:TL_Dir_A, ex:TL_Dir_B, ex:TL_Dir_C, ex:TL_Dir_D, ex:TL_Dir_E .
+
+ex:TL_Dir_A a ex:SubItem ; rdfs:label "(가)" ; ex:description "과학 관련 기초 소양 및 미래 사회 역량 함양을 위한 계획 수립" .
+ex:TL_Dir_B a ex:SubItem ; rdfs:label "(나)" ; ex:description "지식⋅이해, 과정⋅기능, 가치⋅태도의 균형 있는 발달" .
+ex:TL_Dir_C a ex:SubItem ; rdfs:label "(다)" ; ex:description "실제적 맥락의 문제 해결 경험 및 실험⋅실습 기회 제공" .
+ex:TL_Dir_D a ex:SubItem ; rdfs:label "(라)" ; ex:description "학생의 능력 및 수준 적합성 고려 및 능동적 참여 유도" .
+ex:TL_Dir_E a ex:SubItem ; rdfs:label "(마)" ; ex:description "온⋅오프라인 연계 수업 및 디지털 도구/기술 적극 활용" .
+
+# (2) 교수⋅학습 방법
+ex:TL_Method a ex:Method ;
+    rdfs:label "(2) 교수⋅학습 방법" ;
+    ex:includes ex:TL_Meth_A, ex:TL_Meth_B, ex:TL_Meth_C, ex:TL_Meth_D, ex:TL_Meth_E, ex:TL_Meth_F, ex:TL_Meth_G .
+
+ex:TL_Meth_A a ex:SubItem ; rdfs:label "(가) 계획 수립" ; 
+    ex:description "교육과정-교수⋅학습-평가 일관성, 내용 재구성, 과제 연구/과학관 견학 계획, 연계 교육(학교급/진로), 융합적 사고 계발" .
+ex:TL_Meth_B a ex:SubItem ; rdfs:label "(나) 교수 전략" ; 
+    ex:description "다양한 교수방법 활용, 개방형 질문, 학생 중심 탐구, 상호 협력 및 의사소통, 모형의 한계 이해, 과학 글쓰기 및 토론" .
+ex:TL_Meth_C a ex:SubItem ; rdfs:label "(다) 디지털 환경" ; 
+    ex:description "지능형 과학실 활용, 실시간 데이터 측정(센서), 디지털 격차 해소, VR/AR/SW 등 최신 ICT 활용" .
+ex:TL_Meth_D a ex:SubItem ; rdfs:label "(라) 정의적 영역/진로" ; 
+    ex:description "과학의 본성 지도, 첨단 과학기술 가치 인식, 과학자 이야기/시사 도입, 지역 교육 자원 활용, 진로 동기 부여" .
+ex:TL_Meth_E a ex:SubItem ; rdfs:label "(마) 안전 관리" ; 
+    ex:description "사전 안전 지도, 야외 활동 답사, 폐기물 적법 처리, 생명 존중 태도 함양" .
+ex:TL_Meth_F a ex:SubItem ; rdfs:label "(바) 범교과 연계" ; 
+    ex:description "생태전환교육, 디지털⋅AI 기초 소양 등 범교과 주제 연계" .
+ex:TL_Meth_G a ex:SubItem ; rdfs:label "(사) 특수 교육/개별화" ; 
+    ex:description "학습 부진 및 영재, 특수교육 대상 학생 맞춤형 계획 및 대안 제시" .
+
+### 4. [나] 평가 데이터 ###
+
+ex:Section_Eval a ex:Evaluation ;
+    rdfs:label "나. 평가" ;
+    ex:hasDirection ex:Eval_Direction ;
+    ex:hasMethod ex:Eval_Method .
+
+# (1) 평가의 방향
+ex:Eval_Direction a ex:Direction ;
+    rdfs:label "(1) 평가의 방향" ;
+    ex:includes ex:Eval_Dir_A, ex:Eval_Dir_B, ex:Eval_Dir_C, ex:Eval_Dir_D .
+
+ex:Eval_Dir_A a ex:SubItem ; rdfs:label "(가)" ; ex:description "성취기준 근거, 평가 결과 환류를 통한 성장 지원" .
+ex:Eval_Dir_B a ex:SubItem ; rdfs:label "(나)" ; ex:description "지식⋅이해, 과정⋅기능, 가치⋅태도 균형 평가 및 지식 중심 평가 지양" .
+ex:Eval_Dir_C a ex:SubItem ; rdfs:label "(다)" ; ex:description "학습 부진, 영재, 특수교육 대상자 등 개별 요구에 맞는 평가 방법 제공" .
+ex:Eval_Dir_D a ex:SubItem ; rdfs:label "(라)" ; ex:description "디지털 교육 환경 및 온라인 평가 도구 활용" .
+
+# (2) 평가 방법
+ex:Eval_Method a ex:Method ;
+    rdfs:label "(2) 평가 방법" ;
+    ex:includes ex:Eval_Meth_A, ex:Eval_Meth_B, ex:Eval_Meth_C, ex:Eval_Meth_D .
+
+ex:Eval_Meth_A a ex:SubItem ; rdfs:label "(가) 평가 절차" ; ex:description "계획 수립, 도구 개발, 시행, 결과 처리 및 활용의 절차 준수" .
+ex:Eval_Meth_B a ex:SubItem ; rdfs:label "(나) 통합 계획" ; 
+    ex:description "교수⋅학습과 평가의 유기적 연결, 진단/형성/총괄 평가 실시, 개별 맞춤형 환류 제공" .
+ex:Eval_Meth_C a ex:SubItem ; rdfs:label "(다) 종합 평가" ; 
+    ex:description "핵심 개념 적용 능력, 탐구 과정⋅기능(가설/수집/분석 등), 정의적 태도(흥미/협동성/창의성) 및 학습 과정 평가" .
+ex:Eval_Meth_D a ex:SubItem ; rdfs:label "(라) 평가 도구의 다양화" ; 
+    ex:description "지필, 관찰, 실험, 포트폴리오, 자기/동료 평가 활용, 공동 도구 개발, 온라인 평가 병행" .

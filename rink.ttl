@@ -1,0 +1,73 @@
+@prefix ex: <http://example.org/curriculum/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# --- 외부 자원(Web Resources) 정의 ---
+
+ex:Res_KMA_Data a ex:ExternalResource ;
+    rdfs:label "기상청 기상자료개방포털" ;
+    ex:url "https://data.kma.go.kr/" ;
+    ex:description "실시간 데이터, 레이더 및 위성 영상 제공 (일기도 해석 수업 활용)" .
+
+ex:Res_KASI a ex:ExternalResource ;
+    rdfs:label "한국천문연구원 천문우주지식정보" ;
+    ex:url "https://astro.kasi.re.kr/" ;
+    ex:description "태양계 천체 자료, 성단·성운 이미지, 일식·월식 시각 자료 제공" .
+
+ex:Res_KHOA a ex:ExternalResource ;
+    rdfs:label "국립해양조사원 바다누리" ;
+    ex:url "http://www.khoa.go.kr/" ;
+    ex:description "우리나라 주변 해역의 수온, 염분 실시간 관측 데이터 제공" .
+
+ex:Res_KIGAM a ex:ExternalResource ;
+    rdfs:label "국립지질자원연구원 (KIGAM)" ;
+    ex:url "https://www.kigam.re.kr/" ;
+    ex:description "화산대·지진대 분포 확인 및 암석·광물 자원 가치 교육 활용" .
+
+ex:Res_Stellarium a ex:ExternalResource ;
+    rdfs:label "스텔라리움 (Stellarium) 웹 버전" ;
+    ex:url "https://stellarium-web.org/" ;
+    ex:description "별자리 변화 및 천체의 겉보기 운동 관찰용 가상 천문대" .
+
+ex:Res_KMA_Eqk a ex:ExternalResource ;
+    rdfs:label "기상청 지진정보서비스" ;
+    ex:url "https://www.weather.go.kr/w/eqk-vol/search/korea.do" ;
+    ex:description "실시간 지진 및 화산 활동 분포 조사 정보 제공" .
+
+# --- 성취기준 및 탐구활동과 자원 연결 ---
+
+# [9과07-03] 지구 자전과 천체 운동
+ex:Std90703 ex:relatedResource ex:Res_Stellarium, ex:Res_KASI .
+ex:Activity07_1 ex:suggestedTool ex:Res_Stellarium . # 망원경 관측 및 겉보기 운동 활동
+
+# [9과07-01, 02, 04] 태양계 및 달
+ex:Std90701 ex:relatedResource ex:Res_KASI .
+ex:Std90702 ex:relatedResource ex:Res_KASI .
+ex:Std90704 ex:relatedResource ex:Res_KASI .
+
+# [9과09-02, 05] 지권의 변화 및 자원
+ex:Std90902 ex:relatedResource ex:Res_KIGAM .
+ex:Std90905 ex:relatedResource ex:Res_KIGAM, ex:Res_KMA_Eqk .
+
+# [9과17-04] 기압과 날씨 해석
+ex:Std91704 ex:relatedResource ex:Res_KMA_Data .
+ex:Activity17_3 ex:suggestedTool ex:Res_KMA_Data . # 실시간 데이터를 활용한 날씨 해석 활동
+
+# [9과18-02] 해수의 특성(수온, 염분)
+ex:Std91802 ex:relatedResource ex:Res_KHOA .
+ex:Activity18_2 ex:suggestedTool ex:Res_KHOA . # 실시간 해양 정보 분석 활동
+
+# --- 탐구활동 텍스트와 연결 (Activity Mapping) ---
+
+ex:Activity07_2 a ex:InquiryActivity ;
+    rdfs:label "태양계 천체 자료 수집 및 분석하기" ;
+    ex:linkedTo ex:Res_KASI .
+
+ex:Activity09_3 a ex:InquiryActivity ;
+    rdfs:label "디지털 기기를 활용하여 지진과 화산 활동의 분포 조사하기" ;
+    ex:linkedTo ex:Res_KMA_Eqk .
+
+ex:Activity17_3 a ex:InquiryActivity ;
+    rdfs:label "일기도, 레이더 및 위성 영상 등 실시간 데이터를 활용하여 날씨 해석하기" ;
+    ex:linkedTo ex:Res_KMA_Data .

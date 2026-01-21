@@ -1,0 +1,188 @@
+@prefix ex: <http://example.org/curriculum/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# --- 영역(Topic) 정의 ---
+
+ex:Topic07 a ex:Topic ;
+    [cite_start]rdfs:label "(7) 태양계"[cite: 1].
+
+ex:Topic09 a ex:Topic ;
+    [cite_start]rdfs:label "(9) 지권의 변화"[cite: 12].
+
+ex:Topic15 a ex:Topic ;
+    [cite_start]rdfs:label "(15) 별과 우주"[cite: 25].
+
+ex:Topic17 a ex:Topic ;
+    [cite_start]rdfs:label "(17) 날씨와 기후변화"[cite: 34].
+
+ex:Topic18 a ex:Topic ;
+    [cite_start]rdfs:label "(18) 수권과 해수의 순환"[cite: 46].
+
+# --- 1. 성취기준 (Achievement Standards) ---
+
+# (7) 태양계
+ex:Std90701 a ex:Standard ;
+    ex:code "[9과07-01]" ;
+    [cite_start]ex:content "태양계를 구성하는 천체의 특징을 알고, 행성을 목성형 행성과 지구형 행성으로 구분할 수 있다."[cite: 1];
+    ex:belongsTo ex:Topic07 .
+
+ex:Std90702 a ex:Standard ;
+    ex:code "[9과07-02]" ;
+    [cite_start]ex:content "태양의 표면과 대기에서 일어나는 현상을 알고, 태양의 활동이 지구에 미치는 영향을 추론할 수 있다."[cite: 2];
+    ex:belongsTo ex:Topic07 .
+
+ex:Std90703 a ex:Standard ;
+    ex:code "[9과07-03]" ;
+    [cite_start]ex:content "지구 자전에 의한 천체의 겉보기 운동과 지구 공전에 의한 별자리 변화를 이해하고, 밤하늘 천체에 호기심을 가진다."[cite: 3];
+    ex:belongsTo ex:Topic07 .
+
+ex:Std90704 a ex:Standard ;
+    ex:code "[9과07-04]" ;
+    [cite_start]ex:content "달을 관측하여 달의 위상변화 원리를 이해하고, 일식과 월식을 설명할 수 있다."[cite: 4];
+    ex:belongsTo ex:Topic07 .
+
+# (9) 지권의 변화
+ex:Std90901 a ex:Standard ;
+    ex:code "[9과09-01]" ;
+    [cite_start]ex:content "지구계의 구성 요소를 알고, 지권의 층상 구조와 그 특징을 조사⋅발표할 수 있다."[cite: 12];
+    ex:belongsTo ex:Topic09 .
+
+ex:Std90902 a ex:Standard ;
+    ex:code "[9과09-02]" ;
+    [cite_start]ex:content "조암 광물의 주요 특성을 관찰하고, 암석과 광물의 활용 방안 및 자원으로서 가치에 대해 조사할 수 있다."[cite: 13];
+    ex:belongsTo ex:Topic09 .
+
+ex:Std90903 a ex:Standard ;
+    ex:code "[9과09-03]" ;
+    [cite_start]ex:content "지각을 이루는 암석을 생성 과정에 따라 분류하고, 암석의 순환 과정을 설명할 수 있다."[cite: 14];
+    ex:belongsTo ex:Topic09 .
+
+ex:Std90904 a ex:Standard ;
+    ex:code "[9과09-04]" ;
+    [cite_start]ex:content "풍화 과정을 이해하고, 토양 생성 과정을 풍화 작용의 예로 설명할 수 있다."[cite: 15];
+    ex:belongsTo ex:Topic09 .
+
+ex:Std90905 a ex:Standard ;
+    ex:code "[9과09-05]" ;
+    [cite_start]ex:content "대륙이동설을 이해하고, 지진과 화산이 발생하는 지역의 분포를 판의 경계와 관련지어 설명할 수 있다."[cite: 16];
+    ex:belongsTo ex:Topic09 .
+
+# (15) 별과 우주
+ex:Std91501 a ex:Standard ;
+    ex:code "[9과15-01]" ;
+    [cite_start]ex:content "연주시차를 이용하여 별까지의 거리를 구할 수 있고, 별의 등급과 밝기의 관계 및 표면 온도와 색의 관계를 설명할 수 있다."[cite: 25];
+    ex:belongsTo ex:Topic15 .
+
+ex:Std91502 a ex:Standard ;
+    ex:code "[9과15-02]" ;
+    [cite_start]ex:content "우리은하의 구조와 크기를 이해하고, 성운과 성단의 특징을 비교할 수 있다."[cite: 26];
+    ex:belongsTo ex:Topic15 .
+
+ex:Std91503 a ex:Standard ;
+    ex:code "[9과15-03]" ;
+    [cite_start]ex:content "모형을 이용하여 우주가 팽창하고 있음을 설명할 수 있다."[cite: 26];
+    ex:belongsTo ex:Topic15 .
+
+ex:Std91504 a ex:Standard ;
+    ex:code "[9과15-04]" ;
+    [cite_start]ex:content "우주탐사의 의의와 인류에게 미치는 영향을 조사하여 과학의 유용성을 인식할 수 있다."[cite: 27];
+    ex:belongsTo ex:Topic15 .
+
+# (17) 날씨와 기후변화
+ex:Std91701 a ex:Standard ;
+    ex:code "[9과17-01]" ;
+    [cite_start]ex:content "지구 대기권을 4개 권역으로 구분하며, 온실효과와 지구온난화를 복사 평형의 관점으로 설명할 수 있다."[cite: 34];
+    ex:belongsTo ex:Topic17 .
+
+ex:Std91702 a ex:Standard ;
+    ex:code "[9과17-02]" ;
+    [cite_start]ex:content "대기 대순환에서 위도별 바람의 특성을 파악하고, 대기 대순환의 역할을 설명할 수 있다."[cite: 35];
+    ex:belongsTo ex:Topic17 .
+
+ex:Std91703 a ex:Standard ;
+    ex:code "[9과17-03]" ;
+    [cite_start]ex:content "상대습도, 단열 팽창 및 응결 현상의 관계를 이해하고, 구름의 생성과 강수 과정을 설명할 수 있다."[cite: 36];
+    ex:belongsTo ex:Topic17 .
+
+ex:Std91704 a ex:Standard ;
+    ex:code "[9과17-04]" ;
+    [cite_start]ex:content "기압, 기단, 전선의 개념을 이해하고, 일기도에서 저기압과 고기압의 분포에 따른 날씨를 해석할 수 있다."[cite: 37];
+    ex:belongsTo ex:Topic17 .
+
+# (18) 수권과 해수의 순환
+ex:Std91801 a ex:Standard ;
+    ex:code "[9과18-01]" ;
+    [cite_start]ex:content "수권에서 해수, 담수, 빙하의 분포와 활용 사례를 조사하고, 자원으로서 물의 가치에 대해 토론할 수 있다."[cite: 46];
+    ex:belongsTo ex:Topic18 .
+
+ex:Std91802 a ex:Standard ;
+    ex:code "[9과18-02]" ;
+    [cite_start]ex:content "해수의 수온과 염분의 분포 및 변화를 해석하여 해수의 특성을 설명할 수 있다."[cite: 47];
+    ex:belongsTo ex:Topic18 .
+
+ex:Std91803 a ex:Standard ;
+    ex:code "[9과18-03]" ;
+    [cite_start]ex:content "대기 대순환과 해양 표층 순환과의 관계를 이해하고, 기후변화에 영향을 미치는 해류의 역할을 설명할 수 있다."[cite: 48];
+    ex:belongsTo ex:Topic18 .
+
+
+# --- 2. 탐구 활동 (Inquiry Activities) ---
+
+[cite_start]ex:Topic07 ex:hasActivity "망원경을 이용하여 달, 행성 관측하기", "태양계 천체 자료 수집 및 분석하기", "모형을 이용하여 달의 위상변화 관찰하기"[cite: 5].
+[cite_start]ex:Topic09 ex:hasActivity "광물 특성 관찰하기", "암석을 관찰하여 분류하기", "빅데이터를 활용하여 화산대 및 지진대와 판의 경계와의 관련성 탐구하기"[cite: 17].
+[cite_start]ex:Topic15 ex:hasActivity "디지털 탐구 도구를 활용하여 광원으로부터의 거리에 따른 빛의 세기 실험하기", "천체 관측 프로그램을 활용하여 우리은하를 구성하는 천체 관측하기", "우주탐사 계획 세우기"[cite: 28].
+[cite_start]ex:Topic17 ex:hasActivity "기후변화 관련 자료 검색 및 분석하기", "디지털 탐구 도구를 이용하여 구름 생성 과정 실험하기", "일기도, 레이더 및 위성 영상 등 실시간 데이터를 활용하여 날씨 해석하기"[cite: 38].
+[cite_start]ex:Topic18 ex:hasActivity "디지털 탐구 도구를 이용하여 해수의 연직 수온 분포 실험하기", "실시간 데이터를 활용하여 우리나라 주변 해양 정보(수온, 염분) 분석하기"[cite: 49].
+
+
+# --- 3. 성취기준 해설 (Explanations) ---
+
+[cite_start]ex:Std90701 ex:explanation "태양계를 구성하는 천체인 태양, 행성, 왜소행성, 소행성, 위성, 혜성을 개괄적으로 학습하며, 자세한 특징은 다루지 않는다."[cite: 5].
+[cite_start]ex:Std90703 ex:explanation "관측자의 위치(고위도, 저위도, 중위도)에 따른 일주운동은 다루지 않는다. 지구의 자전과 공전을 우주에서 바라보는 관점으로 설명한다."[cite: 6].
+[cite_start]ex:Std90901 ex:explanation "지구계의 구성 요소 및 지권을 구성하는 각 층의 명칭과 상태만 다루며, 지구 내부구조 탐사에서 지진파의 특성은 다루지 않는다."[cite: 17].
+[cite_start]ex:Std90902 ex:explanation "광물의 특성은 색, 조흔색, 굳기, 염산 반응, 자성만 다루고, 굳기는 방해석과 석영 정도만 비교하여 제시한다."[cite: 18].
+[cite_start]ex:Std90903 ex:explanation "지각에 분포하는 다양한 암석 중, 화성암은 현무암, 유문암, 화강암, 반려암을, 퇴적암은 이암, 사암, 역암, 석회암을, 변성암은 편암, 편마암, 대리암, 규암만을 대표적으로 다룬다."[cite: 19].
+[cite_start]ex:Std90905 ex:explanation "화산대와 지진대의 분포가 판의 경계와 일치한다는 정도만 다루고, 판의 경계에서 나타나는 다양한 지질학적 특성은 고등학교 ‘지구과학’에서 다룬다."[cite: 20].
+[cite_start]ex:Std91501 ex:explanation "별까지의 거리를 구하는 방법은 수식을 도입하지 않으며, 연주시차와 겉보기 등급과 절대등급의 개념을 중심으로 다룬다. 별의 표면 온도는 별의 색을 이용하여 비교하는 수준으로만 다룬다."[cite: 28, 29].
+[cite_start]ex:Std91503 ex:explanation "우주 팽창과 관련된 심화 내용(적색 편이, 허블 법칙, 가속 팽창 등)은 다루지 않는다."[cite: 29].
+[cite_start]ex:Std91702 ex:explanation "위도별로 지상에서 부는 바람은 북반구를 기준으로 설명하고, 대기 대순환 설명 시 전향력이나 지구가 자전하지 않을 경우는 다루지 않는다."[cite: 38].
+[cite_start]ex:Std91703 ex:explanation "대기 중의 수증기량과 이슬점, 포화 수증기압, 상대습도 등의 관계를 파악하고, 구름의 생성은 모형실험으로 다룬다. 강수 과정은 빙정설과 병합설에 대해 정성적으로 간단하게 설명한다."[cite: 39, 40].
+[cite_start]ex:Std91704 ex:explanation "기압의 개념과 크기 및 지표면의 차등 가열에 따른 온도 차이로 인해 기압의 변화가 생겨서 바람이 분다는 것을 다룬다. 등압선 그리기, 일기 예보의 과정, 일기도 작성은 다루지 않는다."[cite: 40, 41].
+[cite_start]ex:Std91801 ex:explanation "자원으로서의 물의 가치에서는 지하수의 가치와 활용 방안, 지속가능한 수자원 활용 방안 조사⋅실천 등을 포함하여 다룬다."[cite: 49].
+[cite_start]ex:Std91802 ex:explanation "위도에 따른 해수의 연직 수온 분포 차이보다는 우리나라 주변 해역의 계절별 연직 수온 분포를 위주로 다룬다."[cite: 50].
+[cite_start]ex:Std91803 ex:explanation "해류가 전 지구적인 에너지 재분배를 통하여 기후변화에 미치는 영향을 이해하게 하고, 북태평양의 아열대 순환을 구성하는 해류만을 다룬다."[cite: 51].
+
+
+# --- 4. 성취기준 적용 시 고려 사항 (Considerations) ---
+
+ex:Topic07 ex:consideration 
+    [cite_start]"초등학교 3∼4학년군 ‘밤하늘 관찰’, 5∼6학년군 ‘지구의 운동’, ‘계절의 변화’, 고등학교 ‘통합과학1’의 물질과 규칙성, ‘지구과학’의 태양계 천체와 별과 우주의 진화, ‘행성우주과학’의 우주탐사와 행성계와 연계된다."[cite: 7],
+    [cite_start]"태양, 달, 행성을 천체 망원경으로 관측할 기회를 제공하도록 한다. 지역 천문대나 과학교육원 등을 활용할 수 있다."[cite: 8],
+    [cite_start]"야간에 별이나 행성 등을 관측할 때 안전 사항을 준수하도록 하고, 특히 태양의 흑점, 일식 등을 관찰할 때는 눈으로 직접 보지 않고 필터 등을 사용하도록 지도한다."[cite: 9],
+    [cite_start]"태양계 학습 시 디지털 탐구 도구, 최신 관측 자료, 천체 관측 프로그램, 앱 등을 적절하게 활용하도록 한다."[cite: 10],
+    [cite_start]"일식과 월식은 천체 관측 프로그램이나 모형 등으로 수업을 진행할 수 있으며, 작도 중심의 수업 활동은 지양한다."[cite: 11].
+
+ex:Topic09 ex:consideration 
+    [cite_start]"초등학교 3∼4학년군 ‘땅의 변화’, 고등학교 ‘통합과학1’의 물질과 규칙성, ‘통합과학2’의 환경과 에너지, ‘지구과학’의 지구의 역사와 한반도의 암석, ‘지구시스템과학’의 지구 탄생과 생동하는 지구와 연계된다."[cite: 21],
+    [cite_start]"표준 샘플을 이용한 광물과 암석 관찰을 통해 이들의 대표적인 특징을 알게 한 후, 학교 주변이나 국가지질공원을 구성하는 광물과 암석을 수업의 소재로 활용할 수 있다."[cite: 22],
+    [cite_start]"광물과 암석이 다양하게 활용되는 예를 조사하고, 이를 통해 광물과 암석이 유한한 자원임을 인식시켜 그 가치에 대해 토의해볼 수 있다."[cite: 23],
+    [cite_start]"빅데이터 및 증강 현실을 활용하여 지진대와 화산대의 분포를 판의 경계와 관련지어 추론할 수 있으며, 최근 발생한 지진과 화산에 대해 조사⋅발표하도록 지도할 수 있다."[cite: 24].
+
+ex:Topic15 ex:consideration 
+    [cite_start]"초등학교 3∼4학년군 ‘밤하늘 관찰’, 고등학교 ‘통합과학 2’의 환경과 에너지, ‘지구과학’의 태양계 천체와 별과 우주의 진화, ‘행성우주과학’의 우주탐사와 행성계, 태양과 별의 관측, 은하와 우주와 연계된다."[cite: 30],
+    [cite_start]"디지털 탐구 도구를 활용하여 우리은하를 구성하는 천체의 종류와 특징을 비교⋅분석하는 수업을 전개할 수 있다."[cite: 31],
+    [cite_start]"우주 팽창은 스티커를 붙인 풍선 모형을 이용하여 설명할 수 있다."[cite: 32],
+    [cite_start]"우주탐사 성과를 바탕으로 우주탐사 계획을 세우고, 토의 및 토론, 보고서 작성, 만화 그리기, 연극 활동 등 다양한 교수⋅학습 방법을 적용할 수 있다."[cite: 33].
+
+ex:Topic17 ex:consideration 
+    [cite_start]"초등학교 5∼6학년군 ‘날씨와 우리 생활’, 고등학교 ‘통합과학 2’의 환경과 에너지, ‘지구과학’의 대기와 해양의 상호작용, ‘지구시스템과학’의 강수 과정과 대기의 운동, ‘기후변화와 환경생태’의 기후위기와 환경생태 변화, 기후위기에 대응하는 우리의 노력과 연계된다."[cite: 41],
+    [cite_start]"대기권의 높이에 따른 온도 분포 그래프를 그려보는 활동을 통해 대기권이 4개의 권역으로 이루어져 있음을 이해하도록 지도한다."[cite: 42],
+    [cite_start]"복사 평형, 단열 팽창, 바람의 생성, 전선의 형성은 모형이나 실험을 통해 이해할 수 있도록 한다."[cite: 43],
+    [cite_start]"온실 기체 농도 측정이 시작된 이래로 온실 기체량과 기후변화에 관한 자료를 검색하여 변화 경향성과 관련성을 분석한다."[cite: 44],
+    [cite_start]"기후변화와 환경 재난 등에 대한 심각성을 인식하고, 환경과 인간이 공존할 수 있는 다양한 방법을 모색하도록 지도한다."[cite: 45].
+
+ex:Topic18 ex:consideration 
+    [cite_start]"초등학교 3∼4학년군 ‘지구와 바다’, 고등학교 ‘통합과학2’의 환경과 에너지, ‘지구과학’의 대기와 해양의 상호작용, ‘지구시스템과학’의 해수의 운동, ‘기후변화와 환경생태’의 기후위기와 환경생태 변화, 기후위기에 대응하는 우리의 노력과 연계된다."[cite: 52],
+    [cite_start]"자원으로서 물의 가치, 물 부족 실태에 대해 조사하고 토론하는 과정에서 수자원의 중요성을 인식하고, 물 절약 방안 등과 같은 지속가능한 삶을 위한 실천 방안을 찾아 행동하도록 지도한다."[cite: 53],
+    [cite_start]"모둠별로 다양한 조건을 설정하여 해수의 연직 수온 분포 실험을 수행한 후 결과를 다른 모둠과 비교하여 분석할 수 있다."[cite: 54].

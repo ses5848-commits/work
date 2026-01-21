@@ -1,0 +1,86 @@
+@prefix ex: <http://example.org/reading-education#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### 1. Ontological Schema (OWL/RDFS) ###
+
+# 클래스 정의
+ex:ReadingStrategy a owl:Class ;
+    rdfs:label "독서 전략" .
+
+ex:CognitiveStrategy a owl:Class ;
+    rdfs:label "인지 전략" .
+
+ex:ReadingProcess a owl:Class ;
+    rdfs:label "독서의 과정" .
+
+ex:TextStructure a owl:Class ;
+    rdfs:label "텍스트(글)의 구조" .
+
+ex:TextType a owl:Class ;
+    rdfs:label "텍스트(글)의 종류" .
+
+# 속성 정의 (관계를 나타내는 프로퍼티)
+ex:belongsToCognitive a owl:ObjectProperty ;
+    rdfs:domain ex:ReadingStrategy ;
+    rdfs:range ex:CognitiveStrategy ;
+    rdfs:label "특정 인지 전략 범주에 속함" .
+
+ex:appliesToProcess a owl:ObjectProperty ;
+    rdfs:domain ex:CognitiveStrategy ;
+    rdfs:range ex:ReadingProcess ;
+    rdfs:label "독서 과정 단계와 연계됨" .
+
+### 2. 구체적 범주 데이터 (Categories) ###
+
+# 독서의 과정 (Reading Process)
+ex:BeforeReading a ex:ReadingProcess ; rdfs:label "독서 전" .
+ex:DuringReading a ex:ReadingProcess ; rdfs:label "독서 중" .
+ex:AfterReading a ex:ReadingProcess ; rdfs:label "독서 후" .
+
+# 인지 전략 (Cognitive Strategies)
+ex:ClarifyPurpose a ex:CognitiveStrategy ; 
+    rdfs:label "독서목적 명료화" ; ex:appliesToProcess ex:BeforeReading .
+ex:ActivatePriorKnowledge a ex:CognitiveStrategy ; 
+    rdfs:label "사전지식활성화" ; ex:appliesToProcess ex:BeforeReading .
+ex:FormulateQuestion a ex:CognitiveStrategy ; 
+    rdfs:label "질의형성" ; ex:appliesToProcess ex:BeforeReading .
+ex:InferPredict a ex:CognitiveStrategy ; 
+    rdfs:label "추론/예측" ; ex:appliesToProcess ex:DuringReading .
+ex:Monitoring a ex:CognitiveStrategy ; 
+    rdfs:label "모니터링" ; ex:appliesToProcess ex:DuringReading .
+ex:IdentifyInfo a ex:CognitiveStrategy ; 
+    rdfs:label "특정정보확인" ; ex:appliesToProcess ex:DuringReading .
+ex:SummarizeIntegrate a ex:CognitiveStrategy ; 
+    rdfs:label "요약/종합" ; ex:appliesToProcess ex:AfterReading .
+
+# 텍스트 구조 (Text Structure)
+ex:CauseEffect a ex:TextStructure ; rdfs:label "원인/결과" .
+ex:ConceptExplanation a ex:TextStructure ; rdfs:label "개념/설명" .
+ex:ProblemSolution a ex:TextStructure ; rdfs:label "문제/해결" .
+ex:ComparisonContrast a ex:TextStructure ; rdfs:label "비교/대조" .
+ex:Narrative a ex:TextStructure ; rdfs:label "서사" .
+
+# 텍스트 종류 (Text Type)
+ex:Fact a ex:TextType ; rdfs:label "사실" .
+ex:Argument a ex:TextType ; rdfs:label "주장" .
+ex:Appreciation a ex:TextType ; rdfs:label "감상" .
+
+### 3. 14가지 독서 전략 인스턴스 (Reading Strategies) ###
+
+ex:Strategy_01 a ex:ReadingStrategy ; rdfs:label "예측안내하기" ; ex:belongsToCognitive ex:InferPredict .
+ex:Strategy_02 a ex:ReadingStrategy ; rdfs:label "브레인스토밍" ; ex:belongsToCognitive ex:ActivatePriorKnowledge .
+ex:Strategy_03 a ex:ReadingStrategy ; rdfs:label "SQ3R" ; ex:belongsToCognitive ex:Monitoring .
+ex:Strategy_04 a ex:ReadingStrategy ; rdfs:label "마인드맵" ; ex:belongsToCognitive ex:SummarizeIntegrate .
+ex:Strategy_05 a ex:ReadingStrategy ; rdfs:label "캐릭터 차트" ; ex:belongsToCognitive ex:IdentifyInfo .
+ex:Strategy_06 a ex:ReadingStrategy ; rdfs:label "앙케이트/질문표" ; ex:belongsToCognitive ex:FormulateQuestion .
+ex:Strategy_07 a ex:ReadingStrategy ; rdfs:label "KWL" ; ex:belongsToCognitive ex:ActivatePriorKnowledge .
+ex:Strategy_08 a ex:ReadingStrategy ; rdfs:label "요약기법" ; ex:belongsToCognitive ex:SummarizeIntegrate .
+ex:Strategy_09 a ex:ReadingStrategy ; rdfs:label "그래픽조직자" ; ex:belongsToCognitive ex:SummarizeIntegrate .
+ex:Strategy_10 a ex:ReadingStrategy ; rdfs:label "QAR" ; ex:belongsToCognitive ex:IdentifyInfo .
+ex:Strategy_11 a ex:ReadingStrategy ; rdfs:label "이야기지도" ; ex:belongsToCognitive ex:InferPredict .
+ex:Strategy_12 a ex:ReadingStrategy ; rdfs:label "생각 말하기" ; ex:belongsToCognitive ex:Monitoring .
+ex:Strategy_13 a ex:ReadingStrategy ; rdfs:label "건너뛰며 읽기" ; ex:belongsToCognitive ex:Monitoring .
+ex:Strategy_14 a ex:ReadingStrategy ; rdfs:label "훑어 읽기" ; ex:belongsToCognitive ex:IdentifyInfo .

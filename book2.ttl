@@ -1,0 +1,78 @@
+@prefix ex: <http://example.org/curriculum/> .
+@prefix bk: <http://example.org/book/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# --- (7) 태양계 영역 ---
+bk:Book01 a bk:RecommendedBook ;
+    bk:title "천문학 콘서트" ;
+    bk:author "이광식" ;
+    bk:publisher "더숲" ;
+    bk:targetStandard "[9과07-01], [9과07-03]" ;
+    bk:source "과학기술정보통신부 인증 우수과학도서" .
+
+bk:Book02 a bk:RecommendedBook ;
+    bk:title "행성 리포트" ;
+    bk:author "자일스 스패로" ;
+    bk:publisher "김영사" ;
+    bk:targetStandard "[9과07-01]" ;
+    bk:source "국립과천과학관 추천도서" .
+
+# --- (9) 지권의 변화 영역 ---
+bk:Book03 a bk:RecommendedBook ;
+    bk:title "지질학자처럼 생각하기" ;
+    bk:author "마샤 비어너루드" ;
+    bk:publisher "지상의책" ;
+    bk:targetStandard "[9과09-02], [9과09-03]" ;
+    bk:source "한국과학창의재단 우수과학도서" .
+
+bk:Book04 a bk:RecommendedBook ;
+    bk:title "지진과 화산의 궁금증 100가지" ;
+    bk:author "가미누마 가츠타다" ;
+    bk:publisher "푸른길" ;
+    bk:targetStandard "[9과09-05]" ;
+    bk:source "교육청 권장 교과 연계 도서" .
+
+# --- (15) 별과 우주 영역 ---
+bk:Book05 a bk:RecommendedBook ;
+    bk:title "보이저, 태양계 너머 끝없는 여정" ;
+    bk:author "짐 벨" ;
+    bk:publisher "푸른숲" ;
+    bk:targetStandard "[9과15-04]" ;
+    bk:source "국립어린이청소년도서관 사서 추천" .
+
+bk:Book06 a bk:RecommendedBook ;
+    bk:title "빅뱅 쫌 아는 10대" ;
+    bk:author "이지유" ;
+    bk:publisher "풀빛" ;
+    bk:targetStandard "[9과15-01], [9과15-03]" ;
+    bk:source "과학기술정보통신부 인증 우수과학도서" .
+
+# --- (17) 날씨와 기후변화 영역 ---
+bk:Book07 a bk:RecommendedBook ;
+    bk:title "파란 하늘 빨간 지구" ;
+    bk:author "조천호" ;
+    bk:publisher "동아시아" ;
+    bk:targetStandard "[9과17-01]" ;
+    bk:source "환경부 선정 우수환경도서" .
+
+bk:Book08 a bk:RecommendedBook ;
+    bk:title "기후 변화 쫌 아는 10대" ;
+    bk:author "이지유" ;
+    bk:publisher "풀빛" ;
+    bk:targetStandard "[9과17-03], [9과17-04]" ;
+    bk:source "한국과학창의재단 우수과학도서" .
+
+# --- (18) 수권과 해수의 순환 영역 ---
+bk:Book09 a bk:RecommendedBook ;
+    bk:title "2도가 오르기 전에" ;
+    bk:author "남성현" ;
+    bk:publisher "플루토" ;
+    bk:targetStandard "[9과18-03]" ;
+    bk:source "서울시교육청 교과 연계 추천도서" .
+
+bk:Book10 a bk:RecommendedBook ;
+    bk:title "물은 답을 알고 있다" ;
+    bk:author "에모토 마사루" ;
+    bk:publisher "더난출판사" ;
+    bk:targetStandard "[9과18-01]" ;
+    bk:source "국립중앙과학관 권장도서" .
