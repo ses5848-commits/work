@@ -266,6 +266,38 @@ const curriculumBooks = {
             tags: ["천문학", "행성", "별자리"],
             img: "image/9791186900703.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000001894169"
+        },
+        {
+            title: "우주에서 온 암석",
+            author: "로렌 진 호핑",
+            description: "행성 지질학자 아드리아나 오캄포의 열정과 크레이터 연구를 통해 우주 암석의 비밀을 파헤칩니다.",
+            tags: ["우주암석", "크레이터", "지질학"],
+            img: "image/9788956058177.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000814636"
+        },
+        {
+            title: "칼 세이건이 들려주는 태양계 이야기",
+            author: "정완상",
+            description: "천문학자의 시선으로 태양계의 아홉 행성과 그 특징을 흥미롭게 풀어낸 과학 이야기.",
+            tags: ["태양계", "행성", "칼세이건"],
+            img: "image/9788954404099.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000775228"
+        },
+        {
+            title: "태양계와 지구",
+            author: "과학동아 편집부",
+            description: "NASA와 ESA의 탐사 자료를 바탕으로 태양계 천체들의 신비로운 모습을 생생하게 전달합니다.",
+            tags: ["태양계", "과학동아", "우주탐사"],
+            img: "image/9788962860559.jpg",
+            url: "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000003149477"
+        },
+        {
+            title: "14살에 시작하는 처음 천문학",
+            author: "곽영직",
+            description: "별을 보는 즐거움부터 우주의 역사까지, 청소년을 위한 친절한 천문학 입문서.",
+            tags: ["천문학", "우주", "청소년교양"],
+            img: "image/9788963193083.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000981051"
         }
     ],
     "Std90703": [
@@ -276,6 +308,14 @@ const curriculumBooks = {
             tags: ["천체운동", "우주론", "천문학"],
             img: "image/9791186900659.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000001894167"
+        },
+        {
+            title: "해와 달과 별이 뜨고 지는 원리",
+            author: "박석재",
+            description: "지구와 달의 자전과 공전 등 우리와 밀접한 천체 운동의 원리를 이해하기 쉽게 설명한 책.",
+            tags: ["천체운동", "자전공전", "천문학"],
+            img: "image/9791163630340.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001822142"
         }
     ],
     "Std90901": [
@@ -294,6 +334,40 @@ const curriculumBooks = {
             tags: ["지구과학", "지권", "기상"],
             img: "image/9788994418650.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000001548924"
+        },
+        {
+            title: "지구인도 모르는 지구",
+            author: "김경렬 외",
+            description: "지질, 환경, 해양 등 각 분야 최고 전문가 11인이 들려주는 우리가 몰랐던 지구의 놀라운 이야기.",
+            tags: ["지구과학", "환경", "지질"],
+            img: "image/9791187980124.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001908527"
+        },
+        {
+            title: "지구의 물음에 과학이 답하다",
+            author: "악셀 보야노프스키",
+            description: "움직이는 사막의 바위, 맑은 하늘의 얼음 덩어리 등 지구의 기이한 현상들을 과학적으로 풀어낸 미스터리 탐구서.",
+            tags: ["지구과학", "미스터리", "자연현상"],
+            img: "image/9788998746001.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001636078"
+        }
+    ],
+    "Std90902": [
+        {
+            title: "광물, 그 호기심의 문을 열다",
+            author: "이지섭",
+            description: "아름다운 광물 사진과 함께 광물의 세계를 흥미롭게 탐구하며 수집의 즐거움을 알려주는 안내서.",
+            tags: ["광물", "지질학", "암석", "자연"],
+            img: "image/9788941181873.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000648543"
+        },
+        {
+            title: "광물, 역사를 바꾸다",
+            author: "에릭 샬린",
+            description: "인류 문명의 흐름을 바꾼 50가지 광물의 이야기를 통해 역사와 과학의 흥미로운 만남을 주선합니다.",
+            tags: ["광물역사", "자원", "문명"],
+            img: "image/9788970844855.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001086010"
         }
     ],
     "Std90903": [
@@ -314,6 +388,14 @@ const curriculumBooks = {
             tags: ["지진", "화산", "자연재해"],
             img: "image/9788962911459.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000000977484"
+        },
+        {
+            title: "베게너의 지구",
+            author: "김영호",
+            description: "대륙이동설을 주장한 베게너의 삶과 연구를 통해 판구조론의 탄생 과정을 조명합니다.",
+            tags: ["대륙이동설", "베게너", "판구조론"],
+            img: "image/9788993632699.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001531214"
         }
     ],
     "Std91501": [
@@ -366,6 +448,24 @@ const curriculumBooks = {
             url: "https://product.kyobobook.co.kr/detail/S000218963755"
         }
     ],
+    "Std91503": [
+        {
+            title: "세상은 어떻게 시작되었나",
+            author: "야자와 사이언스 오피스",
+            description: "우주, 은하, 태양계부터 인류의 탄생까지 7가지 주제로 풀어낸 기원 이야기.",
+            tags: ["우주기원", "빅뱅", "진화"],
+            img: "image/9788955618563.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000805852"
+        },
+        {
+            title: "세상에서 가장 쉬운 우주과학 수업",
+            author: "리먀오",
+            description: "지구와 우주의 모양부터 기원과 종말까지, 누구나 이해하기 쉽게 풀어낸 천체물리학 입문서.",
+            tags: ["우주론", "우주기원", "빅뱅"],
+            img: "image/9791186900895.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001894180"
+        }
+    ],
     "Std91504": [
         {
             title: "우주 비즈니스 레볼루션",
@@ -390,6 +490,14 @@ const curriculumBooks = {
             tags: ["우주윤리", "우주쓰레기", "미래우주"],
             img: "image/9791191842982.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000218629898"
+        },
+        {
+            title: "십대, 별과 우주를 사색해야 하는 이유",
+            author: "이광식",
+            description: "천문학을 통해 인생의 가치와 좌표를 찾고, 우주적 관점에서 삶을 성찰하도록 이끄는 인문학적 천문 교양서.",
+            tags: ["천문학", "인문학", "우주관"],
+            img: "image/9788994418506.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001548913"
         }
     ],
     "Std91701": [
@@ -464,6 +572,74 @@ const curriculumBooks = {
             tags: ["지구가열", "기상학", "기후위기"],
             img: "image/9788962622713.jpg",
             url: "https://product.kyobobook.co.kr/detail/S000000971010"
+        },
+        {
+            title: "대기권 과학자 (자연의 이치를 알아낸 지구과학자)",
+            author: "윤일희",
+            description: "대기 과학의 기본 원리부터 대기오염 문제까지, 대기권의 모든 것을 전문가가 쉽게 풀어낸 입문서.",
+            tags: ["대기권", "기상학", "대기과학"],
+            img: "image/9791159711152.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001784476"
+        },
+        {
+            title: "인간은 기후를 지배할 수 있을까",
+            author: "윌리엄 K. 스티븐스",
+            description: "기후 변화의 발자취와 지구 온난화 논쟁을 과학과 역사의 관점에서 심층적으로 파헤친 책.",
+            tags: ["기후변화", "지구온난화", "기후역사"],
+            img: "image/9788978891158.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001221383"
+        },
+        {
+            title: "모두를 위한 환경 개념 사전",
+            author: "김희경 외",
+            description: "환경 분야의 핵심 키워드를 통해 환경 문제의 본질을 이해하고 올바른 개념을 세우도록 돕는 청소년 환경 필독서.",
+            tags: ["환경", "개념사전", "생태"],
+            img: "image/9788958270713.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000000869208"
+        },
+        {
+            title: "미래를 여는 에너지",
+            author: "안젤라 로이스턴",
+            description: "화석 연료의 문제점과 이를 대체할 태양열, 풍력, 바이오 연료 등 지속 가능한 미래 에너지를 탐구합니다.",
+            tags: ["에너지", "환경", "지속가능성"],
+            img: "image/9788974783877.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001164938"
+        },
+        {
+            title: "에너지 위기, 어떻게 해결할까?",
+            author: "이은철",
+            description: "지구 온난화와 화석 연료 고갈 문제의 해결책으로 신재생 에너지의 가능성과 미래 에너지 시대를 탐구하는 청소년 과학 교양서.",
+            tags: ["에너지", "신재생에너지", "환경", "미래과학"],
+            img: "image/9791188704057.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001917714"
+        }
+    ],
+    "Std91702": [
+        {
+            title: "코리올리가 들려주는 대기 현상 이야기",
+            author: "송은영",
+            description: "코리올리 효과와 바람, 구름, 비 등 다양한 대기 현상의 원리를 과학자가 들려주듯이 쉽고 재미있게 설명합니다.",
+            tags: ["대기현상", "날씨", "코리올리"],
+            img: "image/480D191239820.jpg",
+            url: "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000003500846"
+        }
+    ],
+    "Std91704": [
+        {
+            title: "알수록 재미있는 날씨 이야기",
+            author: "게르하르트 슈타군",
+            description: "변덕스러운 날씨의 비밀부터 기후 변화의 심각성까지, 날씨에 관한 다채로운 과학 상식을 담았습니다.",
+            tags: ["날씨", "기후", "기상상식"],
+            img: "image/9788993952766.jpg",
+            url: "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000003225321"
+        },
+        {
+            title: "이 정도는 알아야 하는 최소한의 날씨",
+            author: "반기성",
+            description: "대한민국 최고 날씨 전문가가 전하는 날씨의 이론부터 문화, 경제를 아우르는 필수 교양서.",
+            tags: ["날씨", "기상학", "교양과학"],
+            img: "image/9791188260560.jpg",
+            url: "https://product.kyobobook.co.kr/detail/S000001912348"
         }
     ],
     "Std91801": [
